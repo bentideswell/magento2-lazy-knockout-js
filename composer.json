@@ -1,7 +1,7 @@
 {
     "name": "fishpig/magento2-lazy-knockout-js",
     "description": "Lazy load knockout JS and replace messages JS.",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "require": {
         "php": ">=7.4",
         "magento/module-theme": "*"
