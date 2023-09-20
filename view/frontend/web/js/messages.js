@@ -29,7 +29,9 @@ define([
         }
 
         // Init variables
-        var messageTemplate = _.template(document.getElementById('lazy-ko-message-template').innerHTML);
+        var templateSource = document.getElementById('lazy-ko-message-template');
+        var messageTemplate = _.template(templateSource.innerHTML);
+        templateSource.remove();
         var messageTarget = document.querySelector('div[data-placeholder="messages"]');
         var renderedMessages = [];
         var cookieMessages = _.unique($.cookieStorage.get('mage-messages'), 'text');
