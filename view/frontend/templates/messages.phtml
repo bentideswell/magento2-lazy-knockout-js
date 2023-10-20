@@ -1,8 +1,10 @@
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
+ *
  */
+// To use a Messages system that does not use requireJS, call:
+// $block->setData('use_vanilla_js', true)
+$componentPath = (int)$block->getData('use_vanilla_js') === 1 ? 'messages/vanilla' : 'messages';
 ?>
 <script id="lazy-ko-message-template" type="text/template"><div class="message-<%= type %> <%= type %> message"><%= text %></div></script>
-<script type="text/x-magento-init">{"*":{"FishPig_LazyKnockoutJs/js/messages": {}}}</script>
+<script type="text/x-magento-init">{"*":{"FishPig_LazyKnockoutJs/js/<?= $componentPath ?>": {}}}</script>

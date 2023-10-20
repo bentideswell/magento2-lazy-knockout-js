@@ -2,6 +2,11 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceBlock name="messages" template="FishPig_LazyKnockoutJs::messages.phtml"/>
+        <referenceBlock name="messages" template="FishPig_LazyKnockoutJs::messages.phtml">
+            <!--/** Change below to TRUE to use a JS file that does not use RequireKS */-->
+            <arguments>
+                <argument name="use_vanilla_js" xsi:type="boolean">false</argument>
+            </arguments>
+        </referenceBlock>
     </body>
 </page>
